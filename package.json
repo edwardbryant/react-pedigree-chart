@@ -1,0 +1,15 @@
+{
+  "name": "react-pedigree-chart",
+  "version": "0.1.0",
+  "description": "a react component for generating a chart to display the direct ancestors of an individual within a family tree (i.e., a pedigree chart).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylelint": "ls -al"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^5.9.0"
+  }
+}
