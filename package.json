@@ -2,14 +2,44 @@
   "name": "react-pedigree-chart",
   "version": "0.1.0",
   "description": "a react component for generating a chart to display the direct ancestors of an individual within a family tree (i.e., a pedigree chart).",
+  "author": "Edward Bryant <edward.bryant@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "12.2.0",
+    "npm": "6.9.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no tests specified yet.\"",
-    "stylelint": "ls -al"
+    "lint": "npm run lint:stylelint; npm run lint:eslint",
+    "lint:eslint": "npm run --silent check-version && eslint . --ext .js --ext .jsx",
+    "lint:eslint:fix": "npm run --silent check-version && eslint . --ext .js --ext .jsx --fix",
+    "lint:stylelint": "npm run --silent check-version && stylelint 'src/**/*.scss' --custom-formatter=node_modules/stylelint-formatter-pretty",
+    "check-version": "check-node-version --node '= 12.2.0' --npm '^6.9.0'"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "eslint": "^5.9.0"
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "check-node-version": "^3.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-formatter-pretty": "^1.0.3",
+    "stylelint-scss": "^3.3.1"
   }
 }

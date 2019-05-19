@@ -1,0 +1,27 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": "true",
+    "jest": "true"
+  },
+  "globals": {
+    "context": true,
+  },
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "import/extensions": 0,
+    "one-var": 0,
+    "max-len": [2, 120],
+    "no-confusing-arrow": 0,
+    "no-else-return": ["error", {
+      "allowElseIf": true
+    }],
+    "no-plusplus": 0,
+    "react/require-default-props": 0,
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/*.spec.jsx"],
+      "peerDependencies": true
+    }]
+  }
+}

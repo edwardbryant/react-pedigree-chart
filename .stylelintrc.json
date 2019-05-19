@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "block-opening-brace-space-before": [ "always", {
+      "ignoreAtRules": ["if", "else"]
+    }],
+    "block-no-empty": true
+  }
+}

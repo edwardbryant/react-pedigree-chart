@@ -4,3 +4,11 @@ node_js:
 
 before_install:
   - npm i npm@6.9.0 -g
+
+jobs:
+  include:
+    - stage: lint
+      script: npm run lint:stylelint
+      script: npm run lint:eslint
+    - stage: test
+      script: npm run test
